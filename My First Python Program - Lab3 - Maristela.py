@@ -1,0 +1,12 @@
+name = input("Enter your name: ")
+course = input("Enter your course: ")
+section = input("Enter your section: ")
+favorite_ai_technology = input("Enter your favorite AI technology: ")
+future_ai_project = input("Enter your future AI project: ")
+
+print("\n--- Student Information ---")
+print("Name:", name)
+print("Course:", course)
+print("Section:", section)
+print("Favorite AI Technology:", favorite_ai_technology)
+print("Future AI Project:", future_ai_project)
