@@ -1,0 +1,67 @@
+﻿Moises A. Maristela                                                                                        Sir. Mark Bernardino
+BSCS - 3B                                                                                                       Aug 17, 2026
+
+
+Assessment Task No. 1
+Performance Task 1: From Data to Prediction: How Machine Learning Powers Product Recommendations
+Title: From Data to Prediction: How Machine Learning Powers Product Recommendations
+Chosen ML Application: Product Recommendation
+Problem Description
+An online store wants to recommend products that a specific customer is likely to buy, based on that customer's past shopping behavior and the behavior of similar customers. Instead of a staff member manually deciding what to show each shopper, the goal is to predict which items a given customer is most likely to be interested in.
+Part A - Identify the ML Problem
+Question
+	Answer
+	1. What is the application?
+	Product recommendation on an e-commerce platform.
+	2. What problem are you trying to solve?
+	Predicting which products a specific customer is likely to want to buy next.
+	3. What are the inputs?
+	Customer's purchase history, items viewed/clicked, items added to cart, product ratings given, and the purchase/browsing behavior of similar customers.
+	4. What is the expected output?
+	A ranked list of recommended products for that customer.
+	5. What patterns or relationships might the ML system learn?
+	Customers who buy or view similar products tend to share similar tastes, so a customer's next likely purchase can be predicted from what similar customers bought.
+	6. What data would the system need?
+	Historical transaction records, browsing/click logs, product categories, ratings/reviews, and customer profile data (e.g., purchase frequency).
+	Part B - Traditional Programming vs. Machine Learning Comparison
+Traditional Programming (Input → Algorithm → Output)
+In a traditional approach, a programmer would need to manually write explicit rules for every possible situation — for example, "if the customer bought a phone, recommend a phone case," or "if the customer viewed shoes three times, recommend similar shoes." The programmer would have to anticipate every product combination and customer behavior in advance and hand-code a rule for it. This becomes unmanageable as the number of products and customers grows, because the number of possible rules and exceptions explodes and the rules quickly go out of date as trends change.
+Machine Learning (Input + Output/Data → ML Algorithm)
+In the ML approach, the programmer does not write explicit recommendation rules. Instead, historical examples are provided — pairs of "customer behavior" (input) and "what that customer or similar customers actually purchased" (output) — and the ML algorithm is trained on this data. The algorithm examines many such examples and learns on its own which patterns in behavior are associated with which products, so it can generalize to new customers and new products without a human writing a rule for every case.
+Part C - Create Your Own Mini Dataset
+
+
+Mini Dataset:
+
+
+Original dataset: Hours Worked vs. Pay Earned ($)
+Input (Hours Worked)
+	Output (Pay Earned)
+	1
+	$15
+	2
+	$30
+	3
+	$45
+	4
+	$60
+	5
+	?
+	
+
+1. Identify the pattern: 
+* Each output is exactly 15 times the input. The pay increases by $15 for every additional hour worked.
+2. Determine the missing output: 
+* When Input = 5 hours, Output = $75.
+3. Write the mathematical relationship/function: 
+* y = 15x
+4. Explain how a machine algorithm could learn this relationship from the examples: 
+* Given only the input-output pairs (1, 15), (2, 30), (3, 45), (4, 60), the algorithm would not be told the rule "multiply by 15." Instead, it would start with a random guess for the relationship between hours worked and pay, compare its predicted pay values to the actual pay values in the examples, and measure how large the error was. It would then adjust its internal parameters slightly to reduce that error, and repeat this process across all the examples many times. Through this repeated adjustment, the algorithm's predictions would gradually converge on the true relationship, y = 15x, which it could then use to predict the missing value for 5 hours worked ($75) or for any new number of hours it hasn't seen before.
+Pattern/Relationship Summary:
+This follows the distinction between the two approaches: traditional programming starts from a known, explicitly coded algorithm, while ML starts from examples of inputs and outputs and uses them to discover the algorithm/relationship itself the same principle shown above with the hours-worked-to-pay pattern applies to learning which products a customer is likely to want, just with more complex, less obvious patterns hidden in the behavioral data.
+Part D – Explanation of the Training Process
+How does a Machine Learning algorithm learn from data? 
+* A machine learning algorithm doesn't get told the rules upfront,  it figures them out by looking at a lot of examples. For instance, it might be given a customer's browsing and purchase history, along with what that customer actually ended up buying. The algorithm makes a guess for each example, checks how close that guess was to the real answer, and then tweaks itself a little to do better next time. It does this over and over, thousands of times, across the whole dataset. Little by little, it starts picking up on the actual relationship between the inputs and outputs instead of just memorizing them. Once it's been trained enough, it can take a brand-new customer it's never seen before and still make a solid guess about what they might want to buy.
+Short Reflection
+Why is learning from data useful instead of manually programming every possible rule?
+* Honestly, trying to hand-write a rule for every possible customer situation just isn't realistic. There are too many combinations of behavior to account for, and what people want changes all the time, so any list of rules a programmer writes today would probably be outdated in a few months anyway. Learning from data gets around that problem, the system can pick up on patterns by itself, adjust as new data comes in, and even catch subtle connections (like two customers having similar taste) that would be really hard to spell out as an if-this-then-that rule. It's the same issue the lesson brought up with language translation, there's just no realistic way to manually code every rule needed to cover something that complex.
